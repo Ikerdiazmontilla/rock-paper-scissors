@@ -1,14 +1,4 @@
-// Print the title of the game
-console.log("You are playing rock paper scissors against the machine. Have fun!")
-//Function for playing a game with score
-function game(){
-    let userScore = 0
-    let computerScore = 0
-    
-    //Cicle to repeat the playing process till one player reaches 5 wins
-    while (true){
-        let result = ""
-        let userChoice = ""
+
 
         function rockPaperScissors(){
         
@@ -27,34 +17,6 @@ function game(){
 
 
             const computerChoice = getComputerChoice();
-            // Ask the user to introduce rock, paper or scissors, regardless of the upper or lowercases.
-
-
-
-            function getUserChoice(){
-                let choice = prompt("Choose 'Rock', 'Paper' or'Scissors' ")
-                //Handle other responses
-                while (true){
-                    if(choice === "" || choice === null){
-                        alert("Process canceled")
-                        return choice
-
-                    }
-                
-                    else if (choice.trim().toLowerCase() === "rock" || choice.trim().toLowerCase() === "paper" || choice.trim().toLowerCase() === "scissors" ){
-                        return choice.trim().toLowerCase()
-                    }
-
-                    else{alert("Your choice doesn't exist, make sure you choose one from the list")}
-                    choice = prompt("Choose 'Rock', 'Paper' or'Scissors' ").toLowerCase()
-                }
-            }
-
-
-
-
-            // Store the user answer in a variable called userChoice
-            userChoice = getUserChoice()
 
             //Cancel the process
             if (userChoice === "" || userChoice === null){
@@ -89,43 +51,17 @@ function game(){
             console.log(result)
         }
 
-        rockPaperScissors()
+        let userChoice = ""
+        let buttons = document.querySelectorAll("button")
+        buttons.forEach(
+            (button) => {
+                button.addEventListener("click", 
+                () => {
+                    userChoice = button.className
+                    rockPaperScissors()
+            })
+            })
 
-
-
-
-        //Cancel process
-        if (userChoice === "" || userChoice === null){
-            return;
-        }
-
-        if (result === "You won!!!"){
-            userScore = userScore + 1
-        }
-        else if (result === "Computer won :("){
-            computerScore = computerScore + 1
-        }
-
-        console.log(`Score: YOU => ${userScore}   COMPUTER => ${computerScore}`)
-        if (computerScore === 5){
-            break;
-        }
-
-        else if(userScore === 5){
-            break;
-        }
-    } 
-
-    
-
-    if (computerScore > userScore){
-        console.log("Computer won the game :(")
-    }
-    else {
-        console.log("You won the game!!!")
-    }
-
-}
-
-
-game()
+        
+       
+        
