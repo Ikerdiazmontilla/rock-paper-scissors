@@ -1,3 +1,4 @@
+
 let userScore = 0
 let computerScore = 0
 let result = ""
@@ -48,14 +49,9 @@ let userChoice = ""
 
 let buttons = document.querySelectorAll("button")
 
-buttons.forEach(
-    (button) => {
-        button.addEventListener("click", 
-        () => {
-            userChoice = button.className
-            rockPaperScissors()
-        
-
+function gameLogic(event) {
+    userChoice = event.currentTarget.className;
+    rockPaperScissors()
 
     if (result === "You won!!!"){
         userScore = userScore + 1
@@ -70,12 +66,25 @@ buttons.forEach(
 
     if (computerScore === 5){
         divResult.textContent = `I'm sorry my G, computer won the war`
+        
     }
 
     else if(userScore === 5){
         scoreboard.textContent = `You smashed the computer baby!!!`
     }
 
-})
-})
+    if (computerScore === 5 || userScore === 5) {
+        buttons.forEach((button) => {
+            button.removeEventListener("click", gameLogic);
+        });
+        
+        divResult.innerHTML += `<br> To restart the game reload the page`
+    }
     
+}
+
+buttons.forEach(
+    (button) => {
+        button.addEventListener("click", gameLogic)
+    }
+)
