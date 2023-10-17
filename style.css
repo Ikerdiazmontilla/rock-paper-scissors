@@ -5,13 +5,14 @@ body{
     flex-direction: column;
     box-sizing: border-box;
     margin: 0px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .scoreboard{
     display: flex;
     flex: 1;
     justify-content: space-around;
-    background-color: rgba(249,241,232,255);
+    background-color: #f9f1e8;
 }
 
 .score-img{
@@ -42,15 +43,16 @@ body{
 
 
 
-
-
-
-
 .content{
     display: flex;
     flex-direction: column;
     flex: 4;
-}
+    align-items: center;
+    background-color: #f9f1e8;
 
+}
+h1{
+    color: #5f1e1b;
+}
 
 
