@@ -3,10 +3,10 @@ let userScore = 0
 let computerScore = 0
 let result = ""
 const divResult = document.querySelector("#results")
-const userScoreSpan = document.querySelector("#userScore")
-const computerScoreSpan = document.querySelector("#computerScore")
-userScoreSpan.textContent = userScore
-computerScoreSpan.textContent = computerScore
+const userScoreDiv = document.querySelector("#user")
+const computerScoreDiv = document.querySelector("#computer")
+userScoreDiv.textContent = userScore
+computerScoreDiv.textContent = computerScore
         
 function rockPaperScissors(){
         
@@ -60,8 +60,8 @@ function gameLogic(event) {
         computerScore = computerScore + 1
     }
 
-    userScoreSpan.textContent = userScore
-    computerScoreSpan.textContent = computerScore
+    userScoreDiv.textContent = userScore
+    computerScoreDiv.textContent = computerScore
     scoreboard = document.querySelector("#scoreboard")
 
     if (computerScore === 5){
