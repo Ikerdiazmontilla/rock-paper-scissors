@@ -48,7 +48,7 @@ body{
     flex: 4;
     align-items: center;
     background-color: #f9f1e8;
-    padding: 50px;
+    padding: 8px;
 
 }
 
@@ -56,7 +56,8 @@ body{
     display: flex;
     justify-content: space-between;
     gap: 36px;
-    margin: 50px;
+    margin: 36px;
+    margin-top: 22px;
 }
 
 h1{
@@ -71,6 +72,10 @@ h1{
 
 .rock, .paper, .scissors{
     border-radius: 50%;
+}
+
+#results{
+    text-align: center;
 }
 
 .reset{
