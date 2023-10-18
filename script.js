@@ -47,10 +47,10 @@ function getComputerChoice(){
 
 let userChoice = ""
 
-let buttons = document.querySelectorAll("button")
+let buttons = document.querySelectorAll(".button")
 
 function gameLogic(event) {
-    userChoice = event.currentTarget.className;
+    userChoice = event.currentTarget.id;
     rockPaperScissors()
 
     if (result === "You won!!!"){
@@ -70,7 +70,7 @@ function gameLogic(event) {
     }
 
     else if(userScore === 5){
-        scoreboard.textContent = `You smashed the computer baby!!!`
+        divResult.textContent = `You smashed the computer baby!!!`
     }
 
     if (computerScore === 5 || userScore === 5) {
