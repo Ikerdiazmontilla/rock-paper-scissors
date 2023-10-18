@@ -42,17 +42,43 @@ body{
 }
 
 
-
 .content{
     display: flex;
     flex-direction: column;
     flex: 4;
     align-items: center;
     background-color: #f9f1e8;
+    padding: 50px;
 
 }
+
+#buttons{
+    display: flex;
+    justify-content: space-between;
+    gap: 36px;
+    margin: 50px;
+}
+
 h1{
     color: #5f1e1b;
 }
 
+.play-img{
+    max-height: 100px;
+    width: auto;
+    border-radius: 50%;
+}
 
+.rock, .paper, .scissors{
+    border-radius: 50%;
+}
+
+.reset{
+    border: 0px;
+    border-radius: 50%;
+}
+
+.reset-img{
+    max-height: 150px;
+    width: auto;
+}
