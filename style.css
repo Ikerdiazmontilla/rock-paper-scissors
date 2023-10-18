@@ -79,11 +79,12 @@ h1{
 }
 
 .reset{
-    border: 0px;
     border-radius: 50%;
+    border: 0px;
 }
 
 .reset-img{
     max-height: 150px;
     width: auto;
+    border-radius: 50%;
 }
