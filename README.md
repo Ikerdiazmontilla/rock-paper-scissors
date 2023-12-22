@@ -1,4 +1,7 @@
 # Rock Paper Scissors Project
+## Live demo
+https://ikerdiazmontilla.github.io/rock-paper-scissors/
+
 
 ## Overview
 A Rock Paper Scissors game developed to enhance JavaScript skills and logic application. It's a fun, interactive way to engage with basic programming concepts.
